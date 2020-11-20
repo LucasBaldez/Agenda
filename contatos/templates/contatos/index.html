@@ -3,6 +3,11 @@
 {% block conteudo %}
 <h1 class="mt-5">Minha agenda</h1>
 
+<form method="POST">
+    {% csrf_token %}
+         <input type="text"  name="nome"/>
+         <input type="submit" Value="Search"/>
+
         <table class="table">
           <thead>
             <tr>
@@ -24,7 +29,7 @@
             </tr>
           {% endfor %}
           </tbody>
-        </table>
-
+          </table>
+    </form>
 
 {% endblock %}
